@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+var=""
+while read -r line; do
+	var="${line}\n${var}"
+done
+
+printf "${var}"
