@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+
+var=()
+while read -r line
+do
+	var=("$line" "${var[@]}")
+done
+
+i=0
+while [ $i -lt ${#var[@]} ]
+do
+	echo "${var[$i]}"
+	i=$(( $i + 1 ))
+done
+
