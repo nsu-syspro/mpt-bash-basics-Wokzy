@@ -1,14 +1,16 @@
 #!/usr/bin/bash
 
 
-var=""
+var=()
 while read -r line
 do
-	var="${line} ${var}"
+	var=("$line" "${var[@]}")
 done
 
-for word in $var
+i=0
+while [ $i -lt ${#var[@]} ]
 do
-	echo $word
+	echo "${var[$i]}"
+	i=$(( $i + 1 ))
 done
 
