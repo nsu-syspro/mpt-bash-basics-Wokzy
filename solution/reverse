@@ -1,14 +1,14 @@
 #!/usr/bin/bash
 
 
-var=""
+var=()
 while read -r line
 do
-	var="${line} ${var}"
+	var+=($line)
 done
 
-for word in $var
+for item in ${var[*]}
 do
-	echo $word
+	echo $item
 done
 
