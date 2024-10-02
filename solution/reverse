@@ -1,8 +1,14 @@
 #!/usr/bin/bash
 
+
 var=""
-while read -r line; do
-	var="${line}\n${var}"
+while read -r line
+do
+	var="${line} ${var}"
 done
 
-printf "${var}"
+for word in $var
+do
+	echo $word
+done
+

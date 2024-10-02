@@ -8,5 +8,5 @@ for arg in "$@"; do
 		continue
 	fi
 
-	mv $arg "${arg}${suffix}"
+	mv "${arg}" "${arg}${suffix}"
 done
